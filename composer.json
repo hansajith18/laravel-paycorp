@@ -1,0 +1,75 @@
+{
+    "name": "hansajith18/laravel-paycorp",
+    "description": "Laravel integration for the Paycorp (Bancstac) payment gateway. Supports Hosted Page flow, Real-Time tokenised payments, and Refund/Void.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "paycorp",
+        "bancstac",
+        "payment-gateway",
+        "payments",
+        "tokenization",
+        "pci-dss",
+        "sampath"
+    ],
+    "homepage": "https://github.com/hansajith18/laravel-paycorp",
+    "authors": [
+        {
+            "name": "Navod Hansajith",
+            "email": "hansajith18@gmail.com",
+            "homepage": "https://github.com/hansajith18",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hansajith18/laravel-paycorp/issues",
+        "source": "https://github.com/hansajith18/laravel-paycorp"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/queue": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/events": "^10.0|^11.0|^12.0|^13.0",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "mockery/mockery": "^1.6",
+        "laravel/pint": "^1.0",
+        "phpstan/phpstan": "^1.0|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hansajith18\\LaravelPaycorp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hansajith18\\LaravelPaycorp\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse src --level=5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hansajith18\\LaravelPaycorp\\PaycorpServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
